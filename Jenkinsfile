@@ -12,11 +12,11 @@ pipeline{
                         sh "cat dev/deployment.yaml"
                         sh "git status"
                         sh "git add ."
-                        sh "git commit -m 'Done by Jenkins Job update manifest:v${BUILD_NUMBER}'"
+                        sh "git commit -m 'Done by Jenkins Job update manifest:v${IMAGE_TAG}'"
                         sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/argocd-app-config.git HEAD:main"
-                 }
+                    }
+                }
             }
-        }
         }
     }
 }
