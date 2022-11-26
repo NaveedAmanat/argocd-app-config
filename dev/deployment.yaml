@@ -15,5 +15,6 @@ spec:
       containers:
       - name: myapp
         image: naveed0004/spring-integration:32
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
